@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['uses' => 'Controller@homepage']);
+Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
+
+/**
+ * Routhes to user auth
+ * =========================================================================
+ * 
+ */
+Route::get('/login', ['as'=> 'user.login', 'uses' => 'Controller@login']);
+Route::post('/login', [Controller::class, 'login'])->name('user.login');
