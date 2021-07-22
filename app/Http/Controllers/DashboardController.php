@@ -21,7 +21,7 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return "Estamos na index";
+        return "Estamos na index(dashboard)";
     }
 
     public function auth(Request $request)

@@ -15,7 +15,7 @@ class Controller extends BaseController
     {
         $variavel  = "Homepage do sistema de gestão para grupos de investimentos";
 
-        return view('Welcome', [
+        return view('welcome', [
             'title' => $variavel
         ]);
     }
